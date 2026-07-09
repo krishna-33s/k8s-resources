@@ -1,0 +1,9 @@
+apiversion: v1
+kind: configmap
+metadata:
+  name: nginx-config
+
+data:
+  course: "DevSecOps"
+  name: "krishna"
+  Duration: "5 months"
