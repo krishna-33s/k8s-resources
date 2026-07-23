@@ -1,0 +1,24 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: pod-disc
+spec:
+  containers:
+    #main container
+    - name: nginx-config
+      image: nginx
+      volumeMounts:
+      - name: nginx-logs
+        mountPath: /var/log/nginx
+    #purpose of sidecar container it can pass data to outside
+    - name: almalinux
+      image: almalinux:9
+      volumeMounts:
+      - name: nginx-logs
+        mountPath: /mnt/nginx-logs
+        readOnly: true     
+  # pod-level disc    
+  volumes:
+  - name: nginx-logs
+    emptyDir:
+      sizaLimit: 400Mi 
