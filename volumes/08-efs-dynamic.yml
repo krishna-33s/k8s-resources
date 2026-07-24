@@ -14,7 +14,7 @@ spec:
 apiVersion: v1
 kind: Pod
 metadata:
-  name: efs-app
+  name: efs-ap
 spec:
   containers:
     - name: nginx
