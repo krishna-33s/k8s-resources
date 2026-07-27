@@ -49,7 +49,7 @@ kind: Service
 metadata:
   name: nginx-headless
 spec:
-  clusterIp: none
+  clusterIp: None
   selector:
     project: roboshop
     environment: dev
