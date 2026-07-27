@@ -34,7 +34,7 @@ kind: Service
 metadata:
   name: nginx-headless
 spec:
-  clusterIp: None
+  clusterIP: None
   selector:
     project: roboshop
     environment: dev
